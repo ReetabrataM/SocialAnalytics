@@ -1,4 +1,4 @@
-# SafeScroll AI — SIH 2026 prototype
+# SocialAnalytics — SIH 2026
 
 SafeScroll AI is an event-driven social-media safety and digital-wellbeing application built for a Smart India Hackathon demonstration. It runs a real API service with persistent server state and Server-Sent Events (SSE) for live dashboard updates. It uses a clearly labelled `DemoSocialConnector` and synthetic data—not credentials, scraping, or hidden access to a user's accounts.
 
