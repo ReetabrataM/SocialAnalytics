@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: socialanalytics
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: socialanalytics-db
+          property: connectionString
+
+databases:
+  - name: socialanalytics-db
+    plan: starter

@@ -1,6 +1,7 @@
 FROM node:22-alpine
 WORKDIR /app
-COPY package.json package-lock.json server.js index.html styles.css app.js ./
+COPY package.json package-lock.json server.js index.html styles.css app.js onboarding.js ./
+COPY extension ./extension
 COPY src ./src
 RUN npm ci --omit=dev && chown -R node:node /app
 USER node
